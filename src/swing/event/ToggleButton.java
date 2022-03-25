@@ -37,7 +37,7 @@ public class ToggleButton extends JFrame{
 			String s = b.getText();
 			
 			if(s.equals("Action")) {
-				b.setText("¿¢¼Ç");
+				b.setText("ì•¡ì…˜");
 			} else {
 				b.setText("Action");
 			}

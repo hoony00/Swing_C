@@ -39,7 +39,7 @@ public class ActionTemp extends JFrame{
 //		Object obj = e.getSource();
 //		if(obj == btn) {
 //			if(btn.getText().equals("Action")) {
-//				btn.setText("¿¢¼Ç");
+//				btn.setText("ì•¡ì…˜");
 //			}else {
 //				btn.setText("Action");
 //			}

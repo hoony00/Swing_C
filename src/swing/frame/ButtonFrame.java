@@ -12,7 +12,7 @@ public class ButtonFrame extends JFrame{
 		setLocation(1300, 300);
 		setSize(300, 300);
 				
-		JButton btn = new JButton("¹öÆ°");
+		JButton btn = new JButton("ë²„íŠ¼");
 		add(btn);
 		
 		setVisible(true);

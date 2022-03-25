@@ -11,7 +11,7 @@ import javax.swing.JFrame;
 
 public class ButtonEventFrame extends JFrame implements ActionListener{
 
-	private JButton btn1;		// ÀÎ½ºÅÏ½º º¯¼ö 
+	private JButton btn1;		// ì¸ìŠ¤í„´ìŠ¤ ë³€ìˆ˜
 	private JButton btn2;
 	
 	public ButtonEventFrame(String title) {		
@@ -21,11 +21,11 @@ public class ButtonEventFrame extends JFrame implements ActionListener{
 		setSize(300, 300);
 		setLayout(new FlowLayout());
 		
-		btn1 = new JButton("¹öÆ° 1");
+		btn1 = new JButton("ë²„íŠ¼1");
 		btn1.addActionListener(this);
 		add(btn1);
 		
-		btn2 = new JButton("¹öÆ° 2");
+		btn2 = new JButton("ë²„íŠ¼2");
 		btn2.addActionListener(this);
 		add(btn2);
 		
