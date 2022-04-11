@@ -10,7 +10,7 @@ public class TempFrame extends JFrame{
 		
 		setTitle(title);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setLocation(1300, 300);
+		setLocation(2700, 200);
 		setSize(300, 300);
 		setLayout(new BorderLayout());
 		setVisible(true);

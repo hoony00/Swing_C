@@ -1,4 +1,4 @@
-package swing.components;
+package swing.miniproj;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -18,16 +18,24 @@ public class ChatFrame extends JFrame implements ActionListener{
 	private JPanel panelSouth;
 	
 	private JTextField tf;
+	
 	private JButton btn;
+	private JButton btn2;
 	
 	private JTextArea ta;
 	
-	public ChatFrame(String title) {
+	private MainFrame mainFrame;
+	
+	public ChatFrame(String title, int width, int height, MainFrame mainFrame) {
+		
+		this.mainFrame = mainFrame;				
+		
+		mainFrame.setTitle("CCC");
 		
 		setTitle(title);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setLocation(2700, 200);
-		setSize(300, 300);
+//		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setLocation(2800, 200);
+		setSize(width, height);
 		setLayout(new BorderLayout());
 		
 		setCenter();
@@ -66,7 +74,12 @@ public class ChatFrame extends JFrame implements ActionListener{
 		
 		btn = new JButton("전송");
 		btn.addActionListener(this);
+		
+		btn2 = new JButton("전송2");
+		btn2.addActionListener(this);
+		
 		panelSouth.add(btn);
+//		panelSouth.add(btn2);
 		
 		add(panelSouth, BorderLayout.SOUTH);
 	}
@@ -74,12 +87,32 @@ public class ChatFrame extends JFrame implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		Object obj = e.getSource();
-		if(obj == btn || obj == tf) {
-			ta.append("[사용자] : " + tf.getText() + "\n");
-			tf.setText("");
-			tf.requestFocus();
+		if(obj == btn || obj == tf) {			
+			
+			JTextArea ta2 = mainFrame.getTa();
+			ta2.append("[클라이언트] : " + tf.getText() + "\n");
+			
+			localType();
+		} else if(obj == btn2) {
+			mainFrame.setTitle("홍길동");
 		}
 		
 	}
+
+	private void localType() {
+		ta.append("[클라이언트] : " + tf.getText() + "\n");
+		tf.setText("");
+		tf.requestFocus();
+	}
+
+	public JButton getBtn() {
+		return btn;
+	}
+
+	public JTextArea getTa() {
+		return ta;
+	}
+	
+	
 	
 }
